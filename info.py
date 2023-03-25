@@ -3,10 +3,10 @@ import random
 import omdb
 
 OMDB_API_END_POINT = "http://www.omdbapi.com"
-OMDB_API = ["53aaf0b3", "14f9ea72"]
+OMDB_API = ["omdb keys"]
 omdb.set_default('apikey', random.choice(OMDB_API))
-user_id = -1001652348587
-telegram_token = "1724110863:AAFyJr9ztRytYliLrNaEDrg5fzYSF3tu-iY" 
+user_id = "tg user id"
+telegram_token = "tg bot token" 
 bot = telepot.Bot(telegram_token)
 
 
