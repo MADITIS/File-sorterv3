@@ -2,10 +2,10 @@ import re
 import list_files
 import info
 
-MOVIES = "(.*?)[. ]\(?([(0-9]{4})\)?[. ]([\w]*?)[. ](.*?)-?[A-Za-z]*?"
-QXR_MOVIES = "(.*?) \(([0-9]{4})\) ([A-Z]*?) ?\([0-9p]{4,5}(.*?)(x265)? ([0-9a-z]{4})(.*?)\)"
-ALTERNATIVE = "(.*?)[. ]\(?([(0-9]{4})\)?(.*?)([\w-]*?)[. ](.*?)-?[A-Za-z]*?"
-patterns = [MOVIES,QXR_MOVIES,ALTERNATIVE]
+FIRST_REGEX = "(.*?)[. ]\(?([(0-9]{4})\)?[. ]([\w]*?)[. ](.*?)-?[A-Za-z]*?"
+SECOND_REGEX = "(.*?) \(([0-9]{4})\) ([A-Z]*?) ?\([0-9p]{4,5}(.*?)(x265)? ([0-9a-z]{4})(.*?)\)"
+THIRD_REGEX = "(.*?)[. ]\(?([(0-9]{4})\)?(.*?)([\w-]*?)[. ](.*?)-?[A-Za-z]*?"
+patterns = [FIRST_REGEX,SECOND_REGEX,THIRD_REGEX]
 
 movie_info = info.GetInfo()
 file_obj = list_files.Files()
